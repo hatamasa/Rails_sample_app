@@ -91,7 +91,7 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
     mini_portile2 (2.2.0)
-    minitest (5.10.2)
+    minitest (5.10.1)
     minitest-reporters (1.1.9)
       ansi
       builder
@@ -143,8 +143,8 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (12.0.0)
     rb-fsevent (0.9.8)
-    rb-inotify (0.9.9)
-      ffi (~> 1.0)
+    rb-inotify (0.9.10)
+      ffi (>= 0.5.0, < 2)
     ruby-progressbar (1.8.1)
     sass (3.4.24)
     sass-rails (5.0.6)
@@ -198,6 +198,7 @@ DEPENDENCIES
   jbuilder (= 2.4.1)
   jquery-rails (= 4.1.1)
   listen (= 3.0.8)
+  minitest (~> 5.10, != 5.10.2)
   minitest-reporters (= 1.1.9)
   pg (= 0.18.4)
   puma (= 3.4.0)
