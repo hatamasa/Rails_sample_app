@@ -11,7 +11,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
                                          password_confirmation: "bar" } }
     end
     assert_template 'users/new'
-    assert_select 'form[id=new_user][action="/signup"]'
+    assert_select 'form[id="new_user"][action="/users"]'
     assert_select 'div#error_explanation', /The form contains 4 errors./
     assert_select 'div#error_explanation ul li', /Name can't be blank/
     assert_select 'div#error_explanation ul li', /Email is invalid/
