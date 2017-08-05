@@ -26,10 +26,10 @@ malory:
   password_digest: <%= User.digest('password') %>
   activated: true
   activated_at: <%= Time.zone.now %>
-
-Masaya:
-  name: Masaya Hatano
-  email: masaya19880517@gmail.com
+  
+Takuya:
+  name: Takuya Kimura
+  email: takuya.kimura@rails.com
   password_digest: <%= User.digest('password') %>
   activated: false
   activated_at: <%= Time.zone.now %>
