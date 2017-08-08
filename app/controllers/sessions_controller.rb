@@ -4,10 +4,13 @@ class SessionsController < ApplicationController
   end
 
   def create
+    # sessionフォームのemailでDbを検索
     @user = User.find_by(email: params[:session][:email].downcase)
+    # sessionフォームのパスワードとDbのパスワードが正しいか検証
     if @user && @user.authenticate(params[:session][:password])
       if @user.activated?
         log_in @user
+        # ログインを記憶する
         params[:session][:remember_me] == '1' ? remember(@user) : forget(@user)
         redirect_back_or @user
       else
