@@ -5,8 +5,9 @@ module SessionsHelper
     end
     
     # ユーザーを永続的セッションに記憶する
-    # クッキーにuserIdとトークンを保存
+    # クッキーにuserIdとremember_tokenを保存
     def remember(user)
+        # remember_tokenを発行
         user.remember
         cookies.permanent.signed[:user_id] = user.id
         cookies.permanent[:remember_token] = user.remember_token
@@ -30,6 +31,7 @@ module SessionsHelper
       end
     end
     
+    # ログインの可否を返却する（viewで使用）
     def logged_in?
         !current_user.nil?
     end
