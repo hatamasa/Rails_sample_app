@@ -1,4 +1,5 @@
 # Ruby on Rails チュートリアルのサンプルアプリケーション
+https://quiet-crag-41565.herokuapp.com/
 
 これは、次の教材で作られたサンプルアプリケーションです。   
 [*Ruby on Rails チュートリアル: 実例を使って Rails を学ぼう*](http://railstutorial.jp/)
